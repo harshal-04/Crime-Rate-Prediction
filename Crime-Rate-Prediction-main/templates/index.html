@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Rate Prediction</title>
+    <link rel="icon" href="static/images/favicon.png" type="image/png">
+    
+    <link rel="stylesheet" href="static/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class = "title">Crime Rate Predictor</h1>
+        <h2 class = "tagline">Unlock safety: Reduce crime rate together</h2>
+    </header>
+
+    <section class="section1">
+        <form action="/predict" method="POST">
+            <table class="table1">
+                <tr>
+                    <td class="label">
+                        <label>Select City Name</label>
+                    </td>
+                    <td class="sel">
+                        <select name="city">
+                            <option value="0">Ahmedabad</option>
+                            <option value="1">Bengaluru</option>
+                            <option value="2">Chennai</option>
+                            <option value="3">Coimbatore</option>
+                            <option value="4">Delhi</option>
+                            <option value="5">Ghaziabad</option>
+                            <option value="6">Hyderabad</option>
+                            <option value="7">Indore</option>
+                            <option value="8">Jaipur</option>
+                            <option value="9">Kanpur</option>
+                            <option value="10">Kochi</option>
+                            <option value="11">Kolkata</option>
+                            <option value="12">Kozhikode</option>
+                            <option value="13">Lucknow</option>
+                            <option value="14">Mumbai</option>
+                            <option value="15">Nagpur</option>
+                            <option value="16">Patna</option>
+                            <option value="17">Pune</option>
+                            <option value="18">Surat</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">
+                        <label>Select Crime Type</label>
+                    </td>
+                    <td class="sel">
+                        <select name="crime">
+                            <option value="9">Murder</option>
+                            <option value="8">Kidnapping</option>
+                            <option value="7">Economic Offences</option>
+                            <option value="6">Cyber Crimes</option>
+                            <option value="5">Crime against women</option>
+                            <option value="4">Crime against children</option>
+                            <option value="3">Crime against Senior Citizen</option>
+                            <option value="2">Crime against ST</option>
+                            <option value="1">Crime against SC</option>
+                            <option value="0">Crime Committed by Juveniles</option>
+                        </select>
+                    </td>                  
+                </tr>
+
+                <tr>
+                    <td class="label">
+                        <label>Select Year</label>
+                    </td>
+                    <td class="sel" >
+                        <select name="year" id="year-dropdown"></select>
+                    </td> 
+                </tr>
+            </table>
+
+            <div class="button" >
+                <input type="submit" class="btn id="predict_button"" value="Predict" >
+            </div>               
+        </form>          
+    </section>    
+
+    
+
+
+    <script src="static/main.js"></script>    
+</body>
+</html>
